@@ -1,0 +1,8 @@
+orjson
+ujson
+msgspec
+python-rapidjson
+simplejson
+rfc8785
+canonicaljson
+domonic

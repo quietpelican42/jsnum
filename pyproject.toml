@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsnum"
+version = "0.1.0"
+description = "Exact JavaScript Number, parseInt/parseFloat and JSON.stringify semantics in pure Python."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "__AUTHOR__"}]
+keywords = ["javascript", "ecmascript", "json", "stringify", "number", "parseInt", "parseFloat", "toFixed"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/__GH_OWNER__/jsnum"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+jsnum = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests", "bench"]
+
+[[tool.mypy.overrides]]
+module = ["domonic.*", "orjson", "ujson", "msgspec", "rapidjson", "simplejson", "rfc8785", "canonicaljson"]
+ignore_missing_imports = true
