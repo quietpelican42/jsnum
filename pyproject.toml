@@ -9,7 +9,7 @@ description = "Exact JavaScript Number, parseInt/parseFloat and JSON.stringify s
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "__AUTHOR__"}]
+authors = [{name = "kofiadeyemiq"}]
 keywords = ["javascript", "ecmascript", "json", "stringify", "number", "parseInt", "parseFloat", "toFixed"]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -19,7 +19,7 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/__GH_OWNER__/jsnum"
+Repository = "https://github.com/quietpelican42/jsnum"
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "mypy>=1.10"]
